@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+$: << "#{File.dirname($0)}/../lib"
+
+require 'mamoi'
+require 'yaml'
+
+conf = YAML.load_file("#{ENV['HOME']}/.mamoirc")
+mamoi = Mamoi.new(conf)
+mamoi.mamoi
+
