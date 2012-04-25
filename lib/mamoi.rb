@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'twitter'
 
 class Mamoi
@@ -11,11 +12,14 @@ class Mamoi
   end
 
   def mamoi
-    "nemui.".reverse.each_char do |c|
-      puts c
-      Twitter.update(c)
-      sleep 5
+    "nemuiねむい寝向井ネムイ".reverse.each_char do |c|
+      tweet(c)
     end
   end
 
+  def tweet(s)
+      puts s
+      Twitter.update(s)
+      sleep 5
+  end
 end
