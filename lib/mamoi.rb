@@ -20,6 +20,5 @@ class Mamoi
   def tweet(s)
       puts s
       Twitter.update(s)
-      sleep 5
   end
 end
